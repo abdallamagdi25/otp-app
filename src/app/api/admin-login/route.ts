@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     } else {
       return NextResponse.json({ success: false, message: 'Invalid credentials' }, { status: 401 });
     }
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json({ success: false, message: 'An error occurred.' }, { status: 500 });
   }
 }
